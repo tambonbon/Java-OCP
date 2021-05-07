@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"path": "../Chapter15"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../Chapter19"
+		},
+		{
+			"path": "../Chapter12"
+		}
+	],
+	"settings": {
+		"files.watcherExclude": {
+			"**/target": true
+		}
+	}
+}

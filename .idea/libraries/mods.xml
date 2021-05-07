@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="mods">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Chapter11/sybex-1Z0-815-chapter-11/mods/zoo.animal.feeding.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Chapter11/sybex-1Z0-815-chapter-11/mods/zoo.animal.care.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Chapter11/sybex-1Z0-815-chapter-11/mods/zoo.staff.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Chapter11/sybex-1Z0-815-chapter-11/mods/zoo.animal.talks.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

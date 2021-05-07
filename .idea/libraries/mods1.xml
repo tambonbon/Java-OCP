@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="mods1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Chapter17/sybex-1Z0-816-chapter-6/services/mods/zoo.visitor.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Chapter17/sybex-1Z0-816-chapter-6/services/mods/zoo.tours.reservations.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Chapter17/sybex-1Z0-816-chapter-6/services/mods/zoo.tours.api.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
