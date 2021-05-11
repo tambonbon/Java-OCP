@@ -1,10 +1,17 @@
 package Enthuware._02JavaOOA.nestedClasses;
 
+import java.util.Collection;
+
 import Enthuware._02JavaOOA.nestedClasses.Outsider.InsiderStatic;
 
 class Outsider {
-    public class Insider { }
-    public static class InsiderStatic { }
+    public class Insider {
+        static void test() { } // WRONG, a static method inside non-static inner class
+     }
+    public static class InsiderStatic {
+        void test() { }
+        static void testStatic() { }
+     }
 }
 
 public class Test1 {

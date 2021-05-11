@@ -16,5 +16,14 @@ public class Loop1 {
      
     public static void main(String[] args) {
         new Loop1().printThem(); // 54321
+        new Loop1().stupidLoop();
+    }
+
+    public void stupidLoop() {
+        int i, j;
+        for (i = 0, j = 0; j < 1; i++, j++) { // j++ and ++j NOT matter
+            System.out.println(i + " " + j);
+        }
+        System.out.println(i + " " + j);
     }
 }
