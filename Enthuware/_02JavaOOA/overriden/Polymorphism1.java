@@ -7,7 +7,7 @@ public class Polymorphism1 {
     }
 
     static class B extends A {
-        static int i = 4;
+        int i = 4;
         void print() {
             System.out.println(i + " ");
         }
@@ -29,6 +29,9 @@ public class Polymorphism1 {
             a.print(); // 0 4
 
             // Had i been static or final ---> 4 4 
+
+            A a2 = new A();
+            a2.print(); // A A 
         }
     }
 }

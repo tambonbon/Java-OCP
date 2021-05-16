@@ -70,4 +70,6 @@ class TypeErasureSub extends TypeErasure1 {
 
         // remarks: if an overriden method returns List<? extends Number>...
         // ... overriding method can rerutn List<Number>, List<Integer> but NOT List<Object> or List<? extends Objects>
+
+        // remarks: List<? super Object> is sub-type of List<? super CharSequence>
 }

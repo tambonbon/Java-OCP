@@ -19,14 +19,14 @@ public class Test4 {
         instead of returning a list/set containing the objects that the passed collection contains */
         var list1 = List.of(col);
         col.add(2);
-
+        
         /* 
         copyOf accepts only a Collection
         it iterates through passed COllections,
         and adds all elements of that Collection in the returned list/set */
         var list2 = List.copyOf(col);    
         col.add(3);
-        System.out.println(list1+" " + list2); // [[1,2,3], [1,2]]
+        System.out.println(list1+" " + list2); // [[1,2,3]], [1,2]
 
         /* 
         HOWEVER, this situation DIFFERS !!!
