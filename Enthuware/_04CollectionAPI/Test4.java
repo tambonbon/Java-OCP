@@ -26,7 +26,7 @@ public class Test4 {
         and adds all elements of that Collection in the returned list/set */
         var list2 = List.copyOf(col);    
         col.add(3);
-        System.out.println(list1+" " + list2); // [[1,2,3], [1,2]]
+        System.out.println(list1+" " + list2); // [[1,2,3]], [1,2]
 
         /* 
         HOWEVER, this situation DIFFERS !!!

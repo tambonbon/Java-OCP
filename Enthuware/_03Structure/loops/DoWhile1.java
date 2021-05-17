@@ -22,5 +22,14 @@ public class DoWhile1 {
         }
         System.out.println("i = " + i + " j= " + j);
 
+        
+
+        var b = false;
+        var test = 1;
+        do {
+            test++;
+        } while (b = !b); // while(true) -> loop is execute until while(false)
+        System.out.println(test);  //if while(b = b) -> 2, while(b = !b) -> 3
+
     }
 }

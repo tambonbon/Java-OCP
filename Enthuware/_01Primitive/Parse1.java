@@ -2,7 +2,7 @@ package Enthuware._01Primitive;
 
 import jdk.jfr.Unsigned;
 
-public class Parse1 {
+public class Parse1 { // 3140
     public static void main(String[] args) {
         String str = "10";
         int iVal   = 0;
@@ -10,7 +10,7 @@ public class Parse1 {
 
         try {
             iVal = Integer.parseInt(str, 2); // return 2
-            if ((dVal = Double.parseDouble(str)) == iVal) { // why?
+            if ((dVal = Double.parseDouble(str)) == iVal) { // why? dVal = false works? ah it assign dVa;
                 System.out.println("equal");
             }
         } catch (NumberFormatException exception) {

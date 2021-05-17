@@ -6,6 +6,8 @@ public class Speak {
         ((GoodSpeak)speak).up();
         ((Tone)speak).up();
         ((Tone)(GoodSpeak)speak).up(); 
+
+        // speak.up(); // WRONG, Speak NOT implement up
     }
 }
 

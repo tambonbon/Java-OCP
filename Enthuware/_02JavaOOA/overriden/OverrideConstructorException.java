@@ -21,10 +21,11 @@ public class OverrideConstructorException {
          * public CealConnector(int port) throws IOException, FileNotFoundException, SomeException { }
          * 
          * ---> Rule for overriding constructors DIFFERENT from methods <---
-         * 1. Overriding method CANT throw superclass exception,
+         *      Overriding method CANT throw superclass exception,
          *      while constructor of subclass CANT throw subclass exception
          * 
          */
+        public CleanConnector(int port) throws FileNotFoundException { super(port);} // invalid
     }
     
     // another example
