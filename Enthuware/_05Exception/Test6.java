@@ -1,3 +1,5 @@
+package Enthuware._05Exception;
+
 public class Test6 {
     public static void main(String[] args) {
         int j = 1;

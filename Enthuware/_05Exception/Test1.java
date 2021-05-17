@@ -1,3 +1,5 @@
+package Enthuware._05Exception;
+
 public class Test1 {
     
     static class A {

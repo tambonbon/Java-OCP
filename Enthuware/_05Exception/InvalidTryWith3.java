@@ -1,5 +1,6 @@
-import java.io.IOException;
+package Enthuware._05Exception;
 
+import java.io.IOException;
 public class InvalidTryWith3 implements AutoCloseable {
     boolean open = false;
     int index;

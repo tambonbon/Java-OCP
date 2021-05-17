@@ -1,3 +1,5 @@
+package Enthuware._05Exception;
+
 public class Test5 {
     public static void doStuff() throws Exception {
         System.out.println("Doing stuff..");

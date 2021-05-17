@@ -1,3 +1,5 @@
+package Enthuware._05Exception;
+
 public class Suppressed3 {
     public static void m1() throws Exception {
         throw new Exception("Exception from m1");

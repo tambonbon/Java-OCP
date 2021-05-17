@@ -19,6 +19,7 @@ class Test {
         Vehicle v2 = al4.get(0);
         Drivable d2 = al4.get(0);
         SUV s2 = (SUV) al4.get(0);
+        SUV s3 = al4.get(0);
 
         ArrayList<Vehicle> al5 = new ArrayList<>();
         Car c3 = (Car) al5.get(0);

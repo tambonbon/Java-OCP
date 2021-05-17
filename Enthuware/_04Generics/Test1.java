@@ -10,6 +10,9 @@ interface Player<E> {
     void play(E e);   // because play is not a generic method 
     // (if it was, it MUST have <E> before void)
     // so E here refers to the same type from interface Player
+     
+    // void run(E e);
+    // <E> void jump(E e);
 }
 
 interface GamePlayer<E extends Game> extends Player<E> { }
