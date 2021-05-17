@@ -1,3 +1,5 @@
+package Enthuware._05Exception;
+
 public class Test8 {
     public static void main(String[] args) throws Exception {
         int[] array = null;

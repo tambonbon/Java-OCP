@@ -22,6 +22,11 @@ public class TestDonkey extends Donkey{
         t.move(10);
         t.moveBack(20);
         System.out.println(t.location); // 190
+
+        Donkey donkey = new TestDonkey();
+        donkey.move(10);
+        donkey.moveBack(20);
+        System.out.println(donkey.location); // 190
     }
     
 }
