@@ -1,3 +1,5 @@
+package Enthuware._05Exception;
+
 public class Test7 {
     public static void main(String[] args) throws Exception {
         Float f = null;

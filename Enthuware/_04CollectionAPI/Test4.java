@@ -19,7 +19,7 @@ public class Test4 {
         instead of returning a list/set containing the objects that the passed collection contains */
         var list1 = List.of(col);
         col.add(2);
-        
+        System.out.println(list1); // 1 2
         /* 
         copyOf accepts only a Collection
         it iterates through passed COllections,

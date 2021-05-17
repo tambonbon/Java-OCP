@@ -1,3 +1,5 @@
+package Enthuware._05Exception;
+
 import java.io.IOException;
 
 public class Test4 implements AutoCloseable{
