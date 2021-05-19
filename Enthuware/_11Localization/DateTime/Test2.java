@@ -13,7 +13,6 @@ public class Test2 {
 
         DateFormat dateFormat2 = DateFormat.getDateInstance();
         
-        System.out.println(dateFormat2
         System.out.println(dateFormat2.format(date)); // RTE, IllegalArgumentException: Cant format
     }
 }
