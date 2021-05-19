@@ -30,7 +30,7 @@ public class OverrideGenerics3 {
 
         public <T> List<T> transform(Collection<T> list) {
             return new ArrayList<T>(); // valid override
-        }
+        } // List<T> is a sub-type of Collection<T>
 
         public <X> Collection<X> transform(Collection<X> list) {
             return new HashSet<X>(); // valid override
@@ -39,6 +39,10 @@ public class OverrideGenerics3 {
         public Collection<CharSequence> transform(Collection<CharSequence> list) {
             return new HashSet<CharSequence>(); // neither overload nor override
         }
+
+        // public <T> Collection<T> transform(Collection<T> list) {
+        //     return new HashSet<T>(); // neither overload nor override
+        // } // this worksv
 
         /* 
         ArrayList<CharSequence> is covariant with List<? extends CharSequence>

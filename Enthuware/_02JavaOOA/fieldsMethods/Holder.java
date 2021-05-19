@@ -10,10 +10,12 @@ public class Holder {
         final var a = new Holder(5);
         var b = new Holder(10);
 
-        a.link = b;
-        b.link = setIt(a,b);
+        // a.link = b;
+        // b.link = setIt(a,b);
 
-        // System.out.println(a.link.value + " " + b.link.value); // throws NPE
+        b.link = a; // uncomment this to prevent NPE
+        a.link = setIt(a, b);
+        System.out.println(a.link.value + " " + b.link.value); // throws NPE
         System.out.println(a.link); // null
         System.err.println(b.link); // some object
         /**
@@ -27,7 +29,9 @@ public class Holder {
 
     public static Holder setIt(final Holder x, final Holder y) {
         x.link = y.link;
-        // y.link = x.link;
         return x;
+        
+        // y.link = x.link;
+        // return y; 
     }
 }

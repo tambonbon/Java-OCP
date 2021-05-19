@@ -28,7 +28,7 @@ public class Book {
     }
 
     public static void main(String[] args) {
-        Book b1 = new Book("Java in 24hrs", null);
+        Book b1 = new Book("Java in 24hrs", (double) 24);
         DoubleSupplier b = b1::getPrice;
         b.getAsDouble();
         Double a = b1.getPrice();

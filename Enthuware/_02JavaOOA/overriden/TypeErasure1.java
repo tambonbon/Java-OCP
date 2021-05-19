@@ -40,7 +40,7 @@ class TypeErasureSub extends TypeErasure1 {
      * Covariant returns ---> Valid (ArrayList is sub-type of List)
       */
       @Override
-      public ArrayList<CharSequence> transform(Set<String> list) {
+      public ArrayList<CharSequence> transform(Set<CharSequence> list) { // parameter must be Set<CharSequence> or Set
           return null;
       }
 

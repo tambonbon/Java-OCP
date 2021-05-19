@@ -17,7 +17,9 @@ public class CastClass3 {
         a =  b; // b is upcast to a
         a = (B) b; // B is-a A
         a = (A) b; //  b is explicitly upcasted
-
+        a = (B)(I)b;
+        // a = (A)(I)b;
+        
         /* Runtime exception */
         b = (B)(I) a;
         // because a NOT point to an object of class B
@@ -30,13 +32,17 @@ public class CastClass3 {
         I i = (C) a;
         // C is-a A, which is-a I, but not run because a NOT point to object of class C
         // The following would be fine:
-        /* 
+        
+        /*
         I iPointC = new C();
-        I i = (C) iPointC;
+        i = (C) iPointC;
+        i = iPointC;
          */
 
-        /* Compile exception */
+         /* Compile error */
         // a = (I) b; 
         // an I is not an A
+
+        // b = a;
     }
 }
