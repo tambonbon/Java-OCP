@@ -2,11 +2,11 @@ package Enthuware._10StreamsLambda.FI;
 
 import java.util.function.Function;
 
-public class Test5 {
+public class OperandsOfConcat {
     public static void main(String[] args) {
         StringBuilder sb = new StringBuilder("abcd");
 
-        // Function f = i -> i+1; 
+        Function f = i -> i+1; 
         // Since f is untyped Function ---> input: Object, output: Object,
         // but, you CANT Object + int like this
         // bc at least 1 operands of + MUST be String

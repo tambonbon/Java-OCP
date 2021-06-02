@@ -4,14 +4,14 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MethodReference {
-    static interface Carnivor{
+    static interface Carnivore{
         default int calories(List<String> food) {
             return food.size()*100;
         }
         int eat(List<String> foods);
     }
 
-    static class Tiger implements Carnivor {
+    static class Tiger implements Carnivore {
         @Override
         public int eat(List<String> foods) {
             System.out.println("Eating " + foods);
@@ -23,7 +23,7 @@ public class MethodReference {
         return names.size()*2;
     }
 
-    public static void process(List<String> names, Carnivor c) {
+    public static void process(List<String> names, Carnivore c) {
         c.eat(names);
     }
 
@@ -37,10 +37,10 @@ public class MethodReference {
         // note that Carnivor has EXACTLY 1 abstract method ---> a FI ----> can pass a reference to a method
         process(names, tiger::calories);
         process(names, MethodReference::size);
-
+        
         // Invalid method ref
         process(names, Tiger::eat); // this refers to a static method `eat`, but no such one
-        process(names, Carnivor::calories); // carnivor is a interface
+        process(names, Carnivore::calories); // carnivor is a interface
     }
 
 }

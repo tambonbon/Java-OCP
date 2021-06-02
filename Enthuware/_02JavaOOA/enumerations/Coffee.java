@@ -8,7 +8,8 @@ enum Cafe{
     private Cafe(String strength) { this.strength = strength; }
     @Override
     public String toString() {
-        return String.valueOf(strength);
+        // return strength;
+        return name();
     }
 }
 
@@ -31,5 +32,15 @@ public class Coffee {
         for (var i = 0; i < Cafe.values().length; i++) {
             System.out.println(Cafe.values());
         }
+
+        // HOW TO PRINT VERY STRONG? 
+        Cafe[] arr = Cafe.values();
+        System.out.println(arr[0]);
+        System.out.println(Cafe.valueOf("ESPRESSO"));
+
+        // HOW TO PRINT ESPRESSO (depends on toString())
+        System.out.println(Cafe.ESPRESSO);
+        System.out.println(arr[1]);
+        
     }
 }

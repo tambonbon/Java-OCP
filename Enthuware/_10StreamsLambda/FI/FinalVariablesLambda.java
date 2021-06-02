@@ -2,7 +2,7 @@ package Enthuware._10StreamsLambda.FI;
 
 import java.util.function.Function;
 
-public class Test1 {
+public class FinalVariablesLambda {
     public double process(double payment, int rate) {
         // A local variables needs to be FINAL or EFFECTIVELY FINAL
         // in order to be used in lambdas, or inner class

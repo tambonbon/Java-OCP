@@ -1,9 +1,9 @@
-package Enthuware._10StreamsLambda.FI;
+package Enthuware._10StreamsLambda.FI.FI_Primitive;
 
 import java.util.function.IntFunction;
 import java.util.function.IntUnaryOperator;
 
-public class Test3 {
+public class IntStream {
     public static int operate(IntUnaryOperator iuo) {
         return iuo.applyAsInt(5);
     }

@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class Test3 {
+public class InvalidReusedStream {
     /* 
     This is an example of when a stream CANNOT be re-used
      */

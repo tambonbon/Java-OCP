@@ -16,7 +16,7 @@ class MyProcressor{
     }
 }
 
-public class Test4 {
+public class ConstructorReference {
     /* 
     With constructor references, 
     YOU CAN NEVER PASS ARGUMENTS WHILE REFERRING TO A CONSTRUCTOR OR A METHOD 
@@ -33,8 +33,8 @@ public class Test4 {
         Function<Integer, MyProcressor> f = MyProcressor::new;
         // This tells the compiler to get the constructor reference of the constructor
         // that takes one Integer argument
-        MyProcressor mp = f.apply(10);
-        mp.process();
+        MyProcressor mp1= f.apply(5);
+        mp1.process();
 
         // Arguments are required only when actually invoke the constructor/method
         // MyProcressor::new(10) // NOT MAKE SENSE 

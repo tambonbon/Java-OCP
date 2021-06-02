@@ -18,8 +18,8 @@ public class Polymorphism {
 
         public static void main(String[] args) {
             Base base = new Sub() ;
-            base.methodA();
-            base.methodB(); // methodB is UNDEFINED in Base
+            base.methodA(); // sub - methodA
+            // base.methodB(); // methodB is UNDEFINED in Base
             // base is declared to be a reference of class Base,
             // and methodB is NOT defined in Base
         }
