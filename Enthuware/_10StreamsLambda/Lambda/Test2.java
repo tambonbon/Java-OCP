@@ -1,10 +1,12 @@
-package Enthuware._10StreamsLambda.Lambda.StreamAPI;
+package Enthuware._10StreamsLambda.Lambda;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
-public class Test1 {
+public class Test2 {
     public static void main(String[] args) {
         List<Integer> ls = Arrays.asList(1,2,3);
         
@@ -45,6 +47,13 @@ public class Test1 {
         System.out.println(list.stream()
                                 .collect(Collectors.summarizingInt(x->x)).getSum());
 
+        Map<Integer, Integer> map = new HashMap<>();
+        map.put(null, null);
+        System.out.println(map); // {null=null}
+        System.out.println(map.get(null)); // null
+        map.putIfAbsent(null, 2);
+        System.out.println(map); // null=2
+        System.out.println(map.get(null));
 
     }
     

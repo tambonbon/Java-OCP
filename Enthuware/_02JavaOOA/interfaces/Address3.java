@@ -24,7 +24,7 @@ public class Address3 {
         // FIX: make Office extends House
         // ---> result is from Office.lockTheGates
 
-        /**
+        /** Given HomeOffice NOT implement lockTheGates()
          * 1. If Office NOT extends House 
          *      a. If Office.lockTheGates NOT default --> L14 INVALID, default method conflicts 
          *      b. If Office.lockTheGates default ---> L14 INVALID, duplicate default

@@ -2,20 +2,24 @@ package Enthuware._04Arrays;
 
 public class Test2 { // 1244
     public static void main(String[] args) {
-        A[] a, a1;
-        B[] b;
+        // A[] a, a1;
+        // B[] b;
         
-        a = new A[10];
-        a1 = new A[10];
+        A[] a = new A[1];
+        a[0] = new A();
 
-        b = new B[20];
+        A[] a1 = new A[1];
+        a1[0] = new A();
         
-        a = b;
-        // b = a; // mismatch, you can only do subclass in rhs
-        System.out.println(b.getClass());
-        b = (B[]) a;
+        B[] b = new B[1]; // if change B[] to A[] --> NO compile error
+        b[0] = new B();
+        // a = b; // its good
+        // b = a; // invalid, mismatch, you can only do subclass in rhs
+
+        a = (A[]) b; // promoting should work
+        b = (B[]) a; // ClassCastException
         // cast is needed as superclass is rhs
-        System.out.println(b.getClass());
+
         b = (B[]) a1; // WHY classcastexception?
     }
 }

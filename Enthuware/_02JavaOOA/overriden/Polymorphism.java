@@ -22,6 +22,9 @@ public class Polymorphism {
             // base.methodB(); // methodB is UNDEFINED in Base
             // base is declared to be a reference of class Base,
             // and methodB is NOT defined in Base
+
+            Base base2 = new Base();
+            base2.methodA();
         }
     }
 }

@@ -1,4 +1,4 @@
-package Enthuware._10StreamsLambda.Lambda.StreamAPI;
+package Enthuware._10StreamsLambda.Lambda;
 
 import java.util.Arrays;
 import java.util.List;
