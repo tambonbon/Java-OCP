@@ -6,11 +6,13 @@ public class Equal {
         String unique = new String(exam); // this NOT go into pool of string because NOT a string literal
         String interned = unique.intern(); // if the string literal is in pool already -> return that..
         // .. otherwise, return a new string 
+        String notInterned = "OCP rocks".intern();
 
         System.out.println(
             (exam == unique) + " " +  // false
             (exam == interned) + " " + // true
-            (unique == interned) // false
+            (unique == interned) + " " +  // false
+            ("OCP rocks" == notInterned) // true
         );
 
 

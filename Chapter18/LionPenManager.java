@@ -51,13 +51,13 @@ public class LionPenManager {
     public static void main(String[] args) {
         ExecutorService service = null;
         try {
-            service = Executors.newFixedThreadPool(4);
+            service = Executors.newFixedThreadPool(8); // 8 is number of lions
             var manager = new LionPenManager();
-            var c1 = new CyclicBarrier(4, 
+            var c1 = new CyclicBarrier(10, 
                 () -> System.out.println("*** Lions removed!"));
-            var c2 = new CyclicBarrier(4,
+            var c2 = new CyclicBarrier(10,
                 () -> System.out.println("*** Pen cleaned!"));
-            for (int i = 0; i < 4; i++) {
+            for (int i = 0; i < 8; i++) { // if i less than < 8 ---> hangs forever!
                 service.submit(() -> manager.performTask(c1, c2));
             }
         } finally {
