@@ -2,7 +2,8 @@ package Enthuware._06Concurrency.Basic;
 
 import java.util.concurrent.locks.ReentrantLock;
 
-public class Q2_3362 {
+public class ThreadSafe1 {
+    // 3362
     public static void main(String[] args) {
         AccountThreadSafe acc = new AccountThreadSafe();
         Thread t1 = new Thread(() -> acc.withdraw(10));

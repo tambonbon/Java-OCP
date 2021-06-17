@@ -1,6 +1,6 @@
 package Enthuware._04Arrays;
 
-public class Test2 { // 1244
+public class CastArray { // 1244
     public static void main(String[] args) {
         // A[] a, a1;
         // B[] b;
@@ -13,13 +13,15 @@ public class Test2 { // 1244
         
         B[] b = new B[1]; // if change B[] to A[] --> NO compile error
         b[0] = new B();
-        // a = b; // its good
+        a = b; // its good
         // b = a; // invalid, mismatch, you can only do subclass in rhs
 
-        a = (A[]) b; // promoting should work
-        b = (B[]) a; // ClassCastException
-        // cast is needed as superclass is rhs
+        // a = (A[]) b; // promoting should work
 
+        b = (B[]) a; 
+        // cast is needed as superclass is rhs
+        // this works in runtime because object referenced-to by `a` is actually an array of B
+        
         b = (B[]) a1; // WHY classcastexception?
     }
 }

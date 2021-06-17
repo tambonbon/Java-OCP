@@ -1,6 +1,6 @@
 package Enthuware._02JavaOOP.garbageCollection;
 
-public class GB1 {
+public class GC1 {
 
     public Object getObject(Object a) { 
         Object b = new Object(); // XX

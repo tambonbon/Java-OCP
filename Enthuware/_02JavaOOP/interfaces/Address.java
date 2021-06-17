@@ -38,7 +38,6 @@ public class Address {
 
         Office office = new HomeOffice();
         System.out.println(office.getAddress()); // R No 1, Home
-        // System.out.println(office.getAdres()); // INVALID, this static method of Office can only be accessed as Office.getAdres
         // System.out.println(office.getAdres()); // INVALID, bc getAdres is static
         System.out.println(Office.getAdres()); // R No 1, Home
 

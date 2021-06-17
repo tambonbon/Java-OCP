@@ -10,6 +10,11 @@ public class ChainEq {
          * However, chaining to use a value of a variable at the time of declaration is NOT allowed
          * i.e. int a = b = c = 100 is INVALID if b, c NOT already declared
          */
+
+         int a, b = 10; // this still good
+
+         int c = 10 = d; // invalid
+         int e = f = 10; // invalid, if had int f beforehand --> good
     }
     
 }

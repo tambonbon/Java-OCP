@@ -32,10 +32,11 @@ public class Book {
     }
 
     public static void main(String[] args) {
-        // Book b1 = new Book("Java in 24hrs", (double) 24);
-        // DoubleSupplier b = b1::getPrice;
-        // b.getAsDouble();
-        // Double a = b1.getPrice();
+        Book b1 = new Book("Java in 24hrs", (double) 24);
+        DoubleSupplier bb = b1::getPrice;
+        System.out.println(bb.getAsDouble()); // if b1 was Book("Java", null) --> NPE here
+        Double aa = b1.getPrice();
+        System.out.println(aa);
 
         // System.out.println(b);
         // System.out.println(a);
