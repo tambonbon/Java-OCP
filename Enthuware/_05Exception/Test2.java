@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Test2 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
         try {
             if (args.length == 0) m2();
             else m3();
@@ -18,6 +18,9 @@ public class Test2 {
         catch (IOException ioException) {
 
         }
+         System.out.println("Can this be printed after catch cluase?");
+         m2();
+         System.out.println("Can this be printed after a method throwing exception?");
     }
 
     public static void m2() throws IOException {

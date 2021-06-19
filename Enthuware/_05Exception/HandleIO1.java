@@ -1,11 +1,14 @@
+package Enthuware._05Exception;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
 public class HandleIO1 {
-   public static void copy(String rec1, String rec2) {
+   public static void copy(String rec1, String rec2) throws IOException {
         try {
             // Most of IO ops throws IOException
             // -----> and this code does not handle IOException!!! <----

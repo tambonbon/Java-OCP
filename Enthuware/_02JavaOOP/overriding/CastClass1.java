@@ -13,5 +13,12 @@ public class CastClass1 {
         // You don't need to cast this, because a sub always is-a sup
         sub = (Sub) sup;
 
+        Super superr = new Sub();
+        superr = (Sub) sub;
+
+        superr = new Sub();
+        superr = (Super) sub;
+
+        sup = (Sub) superr;
     }
 }

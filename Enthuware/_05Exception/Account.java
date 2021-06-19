@@ -1,3 +1,5 @@
+package Enthuware._05Exception;
+
 class LowBalanceException extends WithdrawalException {
     public LowBalanceException(String mString) {
         super(mString);

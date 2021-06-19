@@ -3,7 +3,7 @@ package Enthuware._02JavaOOP.overriding;
 public class Override1 {
     static class Book {
         protected final int pages = 100;
-        final void mA() {
+         void mA() {
             System.out.println("In B.mA " + pages);
         }
     }
@@ -16,6 +16,7 @@ public class Override1 {
         
         void mA() {
             // CANNOT OVERRIDE final method 
+            System.out.println("In E.mA " + pages);
         }
     }
 

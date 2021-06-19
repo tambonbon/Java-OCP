@@ -45,4 +45,75 @@ public class CastClass3 {
 
         // b = a;
     }
+
+    // Another set of example:
+    static interface Animal { }
+    static class FourLegs implements Animal { }
+    static class Cat extends FourLegs { }
+    static class PersianCat extends Cat { }
+
+    static class Zoo { 
+        public static void main(String[] args) {
+            // all normal declaration: 
+            FourLegs fourLegs = new FourLegs();
+            Cat cat = new Cat();
+            PersianCat persianCat = new PersianCat();
+            
+            // polymorphism declaration:
+            Animal animalWithFourLegs = new FourLegs();
+            Animal animalLooksLikeCat = new Cat();
+            Animal animalLooksLikePersianCat = new PersianCat();
+            Cat catLooksLikePersianCat = new PersianCat();
+            FourLegs fourLegsCat = new Cat();
+
+            /* Valid cast (comment unrelated casts) */
+            // fourLegs = cat;
+            // fourLegs = (Cat) cat;
+            // fourLegs = (Cat)(Animal) cat; // (Animal)(Cat) is WRONG\
+            // fourLegs = (FourLegs)(Animal) cat;
+            // fourLegs = (Cat) persianCat;
+
+            // these 2 lines are fine
+            // fourLegs = (PersianCat) catLooksLikePersianCat; // in contrast to L85
+            // persianCat = (PersianCat) catLooksLikePersianCat;
+
+            // cat = (PersianCat) catLooksLikePersianCat;
+
+            persianCat = (PersianCat)(Cat) catLooksLikePersianCat; // in contrast to L92
+
+            /* Runtime exceptions: */
+            fourLegs = (PersianCat) cat; // invalid cast.. 
+            // .. because a Cat is not always a PersianCat
+            fourLegs = (PersianCat) animalLooksLikeCat; // invalid cast..
+            // .. because an animalCat NOT is-a PersianCat (it can be any kind of Cat)
+            fourLegs = (PersianCat) fourLegs; // invalid cast..
+            // .. because a FourLegs NOT is-a Cat, and thus NOT is-a PersianCat
+
+            persianCat = (PersianCat)(Cat) animalLooksLikeCat; // Cat CANT be cast to PersianCat ..
+            // .. because the declared type (rhs) of animalLooksLikeCat is Cat
+            // .. and Cat is-not-a PersianCat
+            // L82 works because catLooksLikePersianCat has PersianCat in his rhs
+            
+            /* Compiletime error: */
+            // persianCat = (Cat) animalLooksLikeCat; // error cast ..
+            // .. because you cannot cast Cat to a PersianCat
+            // .. same problem if you are casting Cat to a catLooksLikePersianCat
+
+            // persianCat = (Cat) catLooksLikePersianCat; // error cast ..
+            // .. even though you can cast a catLooksLikePersianCat to a Cat ..
+            // .. that subsequent Cat CANNOT be a persianCat !!
+            // Solution: 
+            // 1. Change persianCat to cat 
+            // 2. (PersianCat)(Cat)
+
+            // catLooksLikePersianCat = animalLooksLikeCat; // error
+            // persianCat = catLooksLikePersianCat; // error ..
+            // .. because a catLooksLikePersianCat is not always a persian cat
+
+            // persianCat = catLooksLikePersianCat;// Cat CANT convert to PersianCat
+
+            // invalid cast:
+            // cat = fourLegs;
+        }
+    }
 }

@@ -1,6 +1,6 @@
 package Enthuware._02JavaOOP.nestedClasses;
 
-public class Test6 {
+public class CallStaticMethodInnerClass {
     public static class TestInner {
         public void sayIt() {
             System.out.println("hello");
@@ -10,7 +10,7 @@ public class Test6 {
         }
 
         public static void main(String[] args) {
-            new Test6.TestInner().sayItStatic();
+            new CallStaticMethodInnerClass.TestInner().sayItStatic();
             TestInner.sayItStatic();
             new TestInner().sayIt();
 

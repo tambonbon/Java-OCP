@@ -1,3 +1,5 @@
+package Enthuware._05Exception;
+
 class MyException extends Throwable {}
 class MyException1 extends MyException {}
 class MyException2 extends MyException{}
