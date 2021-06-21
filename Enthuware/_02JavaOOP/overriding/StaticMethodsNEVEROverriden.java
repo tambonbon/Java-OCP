@@ -16,7 +16,7 @@ public class StaticMethodsNEVEROverriden {
 
     public static void main(String[] args) {
         A a = new B();
-        a.sM1();
+        a.sM1(); // in base static
         
     }
 }

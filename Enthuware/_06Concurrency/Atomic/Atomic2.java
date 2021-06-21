@@ -3,9 +3,9 @@ package Enthuware._06Concurrency.Atomic;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Stream;
 
-public class Q2_1842 {
+public class Atomic2 {
     public static void main(String[] args) {
-        AtomicInteger atomicInteger = new AtomicInteger();
+        AtomicInteger atomicInteger = new AtomicInteger(1);
 
         Stream<String> stream = Stream.of("old", "king", "cole", "was", "a", "meerry", "old", "soul").parallel();
         // stream consists of 8 elements --> JVM may split this stream into 8 streams, 
