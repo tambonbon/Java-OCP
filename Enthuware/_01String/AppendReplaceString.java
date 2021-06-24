@@ -12,7 +12,7 @@ public class AppendReplaceString {
         System.out.println(s); // cloop
 
         /* Why is it different?
-        ---> Because java is pass-by-name <---
+        ---> Because java is pass-by-value <---
          */
     }
 

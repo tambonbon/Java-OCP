@@ -8,7 +8,7 @@ public class UnhandledException {
         } catch (MyNewException exception) {
             unhandledException.m1(); // 1. Because the catch block throws checked exception..
         }
-    }
+    } // Remarks: If the catch block throws unchecked (RT) exception --> fine, the rest after that NOT executed
 
     public void m1() throws MyNewException {
         throw new MyNewException();

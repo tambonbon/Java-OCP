@@ -60,7 +60,7 @@ public class MethodReference2 {
 
         Elephant.process(names, Elephant::sizeElephant); // OK, because sizeElephant is static
         Elephant.process(names, elephant::sizeElephantNotStatic); // OK 
-
+        
         /* Invalid codes */
         Elephant.process(names, Omnivore::eat); // Invalid ..
         // ..because eat (and calories) in Omnivore are non-static

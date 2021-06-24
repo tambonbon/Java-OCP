@@ -20,7 +20,7 @@ public class ListCopyOf {
         instead of returning a list/set containing the objects that the passed collection contains */
         var list1 = List.of(col);
         col.add(2);
-        System.out.println(list1); // [[1 2]]
+        System.out.println("list1 = " + list1); // [[1 2]]
         /* 
         copyOf accepts only a Collection
         it iterates through passed COllections,
@@ -46,18 +46,39 @@ public class ListCopyOf {
         var numB = new Integer[]{1,2};
         var list5 = new ArrayList<Integer>(List.of(numB));
         list5.add(null);
-        System.out.println(list5); //[1, 2, null]
+        System.out.println("list5 = " + list5); //[1, 2, null]
         var list6 = Collections.unmodifiableCollection(list5);
-        System.out.println(list6); // [1, 2, null]
+        System.out.println("list6 = " + list6); // [1, 2, null]
         // even though list6 is unmodifiable..
         // ..  when change an element of underlying list (list5) ..
         // .. list6 also changes
         list5.set(2, 3);
-        System.out.println(list5); // [1, 2, 3]
-        System.out.println(list6); // [1, 2, 3]
+        System.out.println("list5 = " + list5); // [1, 2, 3]
+        System.out.println("list6 = " + list6); // [1, 2, 3]
 
         var list7 = List.of(list5, list6);
-        System.out.println(list7); //[[1, 2, 3], [1, 2, 3]]
+        System.out.println("list7 = "+list7); //[[1, 2, 3], [1, 2, 3]]
+
+        /**
+         * the situation again DIFFERS, when we pass an array with null value
+         */
+        var numC = new Integer[]{1, null, 3}; // of and copyOf NOT support null --> NPE
+        var list8 = List.of(numC);
+        System.out.println("list8 = " +list8);
+        var list9 = Collections.unmodifiableList(list8);
+        numC[1] = 2;
+        System.out.println(list8 + " " + list9);  // if numC was {1,4,3} ---> [1, 4, 3] [1, 4, 3]
+
+        /* 
+        the situation differs now when we add something to unmodifiable list
+         */
+        var strList = new ArrayList<String>();
+        strList.add("A");
+        var strList2 = Collections.unmodifiableCollection(strList);
+        strList.add(null);
+        System.out.println("strList = " + strList + "strList2 = " + strList2); 
+        // strList = [A, null] strList2 = [A, null]
+        strList2.add(null); // throw UnsupportedOpExc
     }
 }
 

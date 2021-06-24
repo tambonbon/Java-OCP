@@ -40,7 +40,7 @@ public class OverrideVsHide {
         Animal.testClassMethod(); // Static method in Animal
         Cat.testClassMethod(); // Static method in Cat (makes sense)
         Cat.testClassMethodNotInChild(); // Static method in Animal but not in Cat
-
+        ((Cat)myCat).testClassMethodNotInChild();
         myAnimal.testClassMethod(); // Static method in Animal
         myAnimal.testInstanceMethod(); // Instance method in Cat
         myCat.testInstanceMethod(); // Instance method in Cat

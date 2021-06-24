@@ -44,3 +44,17 @@ public class Coffee {
         
     }
 }
+
+enum CoffeeNoNoArgsCons {
+    ESPRESSO("VERY STRONG"), MOCHA, LATTE; // INVALID..
+    // because this enum NOT have no-args cons
+    // it would compile if there if `CoffeeNoNoArgsCons() { }`
+    private String strength;
+    private Cafe(String strength) { this.strength = strength; } 
+    @Override
+    public String toString() {
+        // return strength;
+        return name();
+    }
+} 
+}
